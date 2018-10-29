@@ -12,7 +12,7 @@
     epc 
     jedi 
     flycheck
-    material-theme
+    zenburn-theme
     py-autopep8))
 
 (defun uninstalled-packages (packages)
@@ -34,7 +34,7 @@
 ;; --------------------------------------
 
 (setq inhibit-startup-message t) ;; hide the startup message
-(load-theme 'material t) ;; load material theme
+(load-theme 'zenburn t) ;; load theme
 (global-display-line-numbers-mode t) ;; enable line numbers globally
 
 ;; Global Jedi config vars
