@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/Projects/neotree")
+(add-to-list 'load-path "~/Projects/vendor/emacs-neotree")
 (require 'neotree)
 ;(global-set-key [f8] 'neotree-toggle)
 (setq neo-smart-open t)
@@ -18,4 +18,4 @@
         (message "Could not find git project root."))))
 
 (global-set-key [f8] 'neotree-project-dir)
-
+(setq neo-window-width 40)

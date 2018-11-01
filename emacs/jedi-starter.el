@@ -201,7 +201,7 @@ May be necessary for some GUI environments (e.g., Mac OS X)")
       (local-set-key (kbd "M-/") 'jedi:get-in-function-call))
 
     ;; Don't let tooltip show up automatically
-    (setq jedi:get-in-function-call-delay 10000000)
+    (setq jedi:get-in-function-call-delay 1000)
     ;; Start completion at method dot
     (setq jedi:complete-on-dot t)
     ;; Use custom keybinds
