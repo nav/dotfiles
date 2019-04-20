@@ -93,6 +93,8 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# move workspace to monitor
+bindsym $mod+m move workspace to output left
 
 set $workspace1 "1. "
 set $workspace2 "2. "
@@ -186,7 +188,10 @@ bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute 0 toggle #
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec --no-startup-id /opt/xflux -z 98230
+#exec --no-startup-id /opt/xflux -z 98230
+exec --no-startup-id redshift -l 49.28:123.12 -g 0.8 -m  randr:screen=0
 
 exec --no-startup-id sleep 1 && feh --bg-fill $HOME/.config/i3/Forest2.png
+
+new_window pixel 0
 
