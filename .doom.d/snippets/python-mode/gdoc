@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# contributor: Nav Aulakh <nav@navaulakh.com>
+# name: gdoc
+# key: gd
+# --
+"""$1
+
+Args:
+        $2
+
+Raises:
+        $3
+
+Returns:
+        $4
+"""

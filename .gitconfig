@@ -1,3 +1,6 @@
 [user]
-	email = nav@navaulakh.com
-	name = Nav Aulakh
+        name = Nav Aulakh
+        email = nav@navaulakh.com
+        signingkey = A725CE8A706A4C1C
+[commit]
+        gpgsign = true
