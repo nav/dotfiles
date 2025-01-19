@@ -103,72 +103,13 @@ source $ZSH/oh-my-zsh.sh
 
 # Nav's customizations
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(pyenv init -)"
-
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-export PATH="/usr/local/opt/libpq/bin:$PATH"
-export PATH=$PATH:/Users/nav/Library/Python/3.9/bin
-export PIPENV_VENV_IN_PROJECT=1
 export TERM=xterm-256color
 
 # Aliases
 alias dc="docker-compose"
 alias dcp="docker-compose -f docker-compose.yml -f docker-compose.stateful.yml"
 alias k="kubectl"
-alias kd="kubectl --kubeconfig ~/.kube/kindconfig"
-alias node16='export PATH="/usr/local/opt/node@16/bin:$PATH"'
-alias node14='export PATH="/usr/local/opt/node@14/bin:$PATH"'
+alias ai="ollama run llama3.2"
+alias em="open -a emacs &"
 
-alias aws-prod="~/.aws-switcher.sh production production admin-role arn:aws:iam::<acct number>:mfa/nav"
-alias aws-staging="~/.aws-switcher.sh production staging admin-role arn:aws:iam::<acct number>:mfa/nav"
-alias aws-infra="~/.aws-switcher.sh production infrastructure-lab admin-role arn:aws:iam::<acct number>:mfa/nav"
-
-alias pfy='
-emacs --daemon=procurify && \
-emacsclient \
-  --socket-name=procurify \
-  --create-frame \
-  --no-wait \
-  --eval "(progn (toggle-frame-fullscreen) (find-file \"~/Projects/procurify/manage.py\"))"'
-alias cpfy='emacsclient --socket-name=procurify -e "(kill-emacs)"'
-
-alias org='
-emacs --daemon=org && \
-emacsclient \
-  --socket-name=org \
-  --create-frame \
-  --no-wait \
-  --eval "(progn (toggle-frame-maximized) (dired \"~/Dropbox/Org\"))"'
-alias corg='emacsclient --socket-name=org -e "(kill-emacs)"'
-
-# Alias functions
-function op() {
-  PROJECT=$(basename $(pwd))
-  FILENAME=$1
-
-  emacs --daemon=${PROJECT} && \
-  emacsclient \
-    --socket-name=${PROJECT} \
-    --create-frame \
-    --no-wait \
-    --eval "(find-file '\"${FILENAME}\")"
-}
-
-function cl() {
-  PROJECT=$(basename $(pwd))
-  emacsclient --socket-name=${PROJECT} -e "(kill-emacs)"
-}
-
-
-# Golang
-#export GOPATH=$HOME/go
-#export GOROOT="$(brew --prefix golang)/libexec"
-#export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
-
-
-# Enable for libpq
-#export LDFLAGS="-L/usr/local/opt/libpq/lib"
-#export CPPFLAGS="-I/usr/local/opt/libpq/include"
-#export PKG_CONFIG_PATH="/usr/local/opt/libpq/lib/pkgconfig"
-
-export PATH="$HOME/.poetry/bin:$PATH"
+export PATH=~/.config/emacs/bin:$PATH
